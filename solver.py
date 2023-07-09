@@ -15,7 +15,7 @@ def print_board(bo):
     for i in range(len(bo)): #para cada numero no eixo X
         if i % 3 == 0 and i != 0: #se for uma linha divisivel por 3 e não for a linha zero
             print("---------------------") #imprime o separador
-        for j in range(len(bo[0])): 
+        for j in range(len(bo[i])): 
             if j % 3 == 0  and j != 0: #se for uma coluna divisivel por 3 e nao for a primeira
                 print("| ", end="") #imprime o pipe e nao quebra a linha
             if j == 8: #se for a ultima posicao
@@ -25,7 +25,7 @@ def print_board(bo):
 
 def find_empty(bo):
     for i in range(len(bo)):
-        for j in range(len(bo[0])): #loop por todos os valores
+        for j in range(len(bo[i])): #loop por todos os valores
             if bo[i][j] == 0: # se o valor for zero
                 return (i, j) # retorna linha coluna com campo em zero
 
