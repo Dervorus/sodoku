@@ -23,6 +23,12 @@ def print_board(bo):
             else: # qualquer outra posicao
                 print(str(bo[i][j])+ " ", end="") #imprime o caracter e nao quebra a linha
 
+def find_empty(bo):
+    for i in range(len(bo)):
+        for j in range(len(bo[0])): #loop por todos os valores
+            if bo[i][j] == 0: # se o valor for zero
+                return (i, j) # retorna linha coluna com campo em zero
+
 def main():
     print_board(board)
     
